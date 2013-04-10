@@ -1,0 +1,15 @@
+Scopul proiectului consta in a construi un compilator al unui limbaj simplu de
+programare, detectarea aventualelor erori semantice  si afisarea 
+variabilelor declarate.
+Constructia arborelui de parsare a fost facuta cu ajutorul unui algoritm
+specializat prezent in clasa 'Arbore'. Arborele este afisat cu ajutorul 
+metodei 'display' din cadrul clasei Node.
+Dupa ce este construit si afisat, acesta este parcurs de doua ori, cu 
+scopul vizitarii tuturor nodurilor.
+Pentru aceasta am folosit Visitor Pattern
+Parcurgerea acestuaia se realizeaza cu un vizitator ajutator, ce va apela 
+metoda 'accept' pentru fiecare nod in parte, avand ca parametru vizitatorul 
+real. Dupa apelarea acestei metode se apeleaza metoda 'visit' pentru nodul 
+curent. Clasele SemanticVisitor si ResultVisitor implementeaza metodele 
+'visit' pentru fiecare tip de nod si verifica pentru fiecare nod 
+corectitudinea , respectiv retine variabilele declarate.
